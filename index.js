@@ -19,7 +19,7 @@ const SKILL_NAME = 'World Facts';
 const GET_FACT_MESSAGE = "Your fun fact about ";
 const HELP_MESSAGE = 'You can say tell me a world fact, or, you can say exit... What can I help you with?';
 const HELP_REPROMPT = 'What can I help you with?';
-const STOP_MESSAGE = 'Exit';
+const STOP_MESSAGE = 'Hope you had fun learning! bye!';
 //===========================================================================================================================================
 //Facts about all continents
 //===========================================================================================================================================
