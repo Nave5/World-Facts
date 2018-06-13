@@ -1,1 +1,57 @@
+----------------------------------------------------------------------------------------------------------------------------------------
+The break down
+The first step was creating the constants that would be used in all the functions to reduce the amount of typing to be done while
+coding the functions. This is done in the code shown below.
 
+This constant stores the skill name to be used by the function to be able to locate what it is looking for.
+const SKILL_NAME = 'World Facts';
+
+This constant is just a string that is included in the begining of every function.
+const GET_FACT_MESSAGE = "Your fun fact about ";
+
+This was built in to the blueprint however I modified it to compliment my program so when the user says help this string with display.
+const HELP_MESSAGE = 'You can say tell me a world fact, or, you can say exit... What can I help you with?';
+
+This was also built in and plays if the user does not reposnd to the first help message prompt.
+const HELP_REPROMPT = 'What can I help you with?';
+
+This is a string that plays when the user stops the program.
+const STOP_MESSAGE = 'Hope you had fun learning! bye!';
+
+
+The next constants were 7 arrays all assigned to one continent that stored multiple facts about each continent.
+
+This bit of code starts the program when the intro intent is said then prompts the user to pick a continent and listens to what the user says.
+'introintent': function () {
+        //Asks what continents array to call the fact from
+        this.response.speak("what continent do you want to learn about?").listen("what continent do you want to learn about?");
+        this.emit(':responseReady');
+       
+This was a built in function that emits the constant HELP_MESSAGE and will display HELP_REPROMPT if the user doesnt answer in a certain amount of time.
+ 'AMAZON.HelpIntent': function () {
+        const speechOutput = HELP_MESSAGE;
+        const reprompt = HELP_REPROMPT;
+
+        this.response.speak(speechOutput).listen(reprompt);
+        this.emit(':responseReady');
+    },
+    
+    This function is used to exit the code.
+    'AMAZON.StopIntent': function () {
+        this.response.speak(STOP_MESSAGE);
+        this.emit(':responseReady');
+    },
+    
+    There are 7 functions like this for each continent. This function is called when the user says North America. The function will the cotant GET_FACT_MESSAGE which is "Your fun fact about " then display N
+     'northAmericaFacts': function () {
+        const factArr = NORTHAMERICA;
+        const factIndex = Math.floor(Math.random() * factArr.length);
+        const randomFact = factArr[factIndex];
+        const speechOutput = GET_FACT_MESSAGE + 'North America is ' + randomFact;
+        
+         this.response.cardRenderer(SKILL_NAME, randomFact);
+        //Outputs speech and listens for another continent to be said.
+        this.response.speak(speechOutput + ' If you want to hear another fact say another or the same continent').listen("what continent do you want to learn about?");
+        this.emit(':responseReady');
+
+    },
