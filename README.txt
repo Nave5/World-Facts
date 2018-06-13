@@ -1,6 +1,6 @@
 -------------------------------------------------------------------------------
 Learn all around the globe with just a few simple steps!
-1)open the program world facts and ask alexa to tell you a fact by saying
+1)Open the program world facts and ask alexa to tell you a fact by saying
 "open world facts and tell me a fact".
 
 2)Following alexas prompt to pick a continent say one out of the seven continents
