@@ -10,7 +10,7 @@ you want to learn about for example "North America".
 the name of another continent you want to learn about. If you want to learn another fact
 from the same continent you just learned about then just repeat the name of the continent.
 
-4)Listen and learn fun facts about anywhere aroung the globe!
+4)Listen and learn fun facts about anywhere around the globe!
 
 5)When finshed learning simply say stop to exit the program.
 ----------------------------------------------------------------------------------
