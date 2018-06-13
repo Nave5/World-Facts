@@ -6,7 +6,13 @@ Learn all around the globe with just a few simple steps!
 2)Following alexas prompt to pick a continent say one out of the seven continents
 you want to learn about for example "North America".
 
-3)Listen and learn fun facts about anywhere aroung the globe!
+3)If you want to learn another fact then follow alexas instructions and just say
+the name of anu continent you want to learn about. If you want to learn another fact
+from the same continent then just repeat the name of the continent.
+
+4)Listen and learn fun facts about anywhere aroung the globe!
+
+5)When finshed learning simply say stop to exit the program.
 ----------------------------------------------------------------------------------
 
                 _-o#&&*''''?d:>b\_
