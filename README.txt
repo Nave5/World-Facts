@@ -7,8 +7,8 @@ Learn all around the globe with just a few simple steps!
 you want to learn about for example "North America".
 
 3)If you want to learn another fact then follow alexas instructions and just say
-the name of anu continent you want to learn about. If you want to learn another fact
-from the same continent then just repeat the name of the continent.
+the name of another continent you want to learn about. If you want to learn another fact
+from the same continent you just learned about then just repeat the name of the continent.
 
 4)Listen and learn fun facts about anywhere aroung the globe!
 
