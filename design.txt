@@ -21,13 +21,15 @@ const STOP_MESSAGE = 'Hope you had fun learning! bye!';
 
 The next constants were 7 arrays all assigned to one continent that stored multiple facts about each continent.
 
-This bit of code starts the program when the intro intent is said then prompts the user to pick a continent and listens to what the user says.
+This bit of code starts the program when the intro intent is said then prompts the user to pick a continent and listens to what the user 
+says.
 'introintent': function () {
         //Asks what continents array to call the fact from
         this.response.speak("what continent do you want to learn about?").listen("what continent do you want to learn about?");
         this.emit(':responseReady');
        
-This was a built in function that emits the constant HELP_MESSAGE and will display HELP_REPROMPT if the user doesnt answer in a certain amount of time.
+This was a built in function that emits the constant HELP_MESSAGE and will display HELP_REPROMPT if the user doesnt answer in a certain 
+amount of time.
  'AMAZON.HelpIntent': function () {
         const speechOutput = HELP_MESSAGE;
         const reprompt = HELP_REPROMPT;
@@ -42,7 +44,10 @@ This was a built in function that emits the constant HELP_MESSAGE and will displ
         this.emit(':responseReady');
     },
     
-    There are 7 functions like this for each continent. This function is called when the user says North America. The function will the constant GET_FACT_MESSAGE which is "Your fun fact about " with the string "North America is " and a random string from the NORTHAMERICA array list. After combining them into one string it will print that string aswell as the string "If you want to hear another fact say another or the same continent" then it will listen for the user to say a new continent or stop.
+    There are 7 functions like this for each continent. This function is called when the user says North America. The function will the 
+    constant GET_FACT_MESSAGE which is "Your fun fact about " with the string "North America is " and a random string from the 
+    NORTHAMERICA array list. After combining them into one string it will print that string aswell as the string "If you want to hear 
+    another fact say another or the same continent" then it will listen for the user to say a new continent or stop.
      'northAmericaFacts': function () {
         const factArr = NORTHAMERICA;
         const factIndex = Math.floor(Math.random() * factArr.length);
@@ -51,12 +56,18 @@ This was a built in function that emits the constant HELP_MESSAGE and will displ
         
          this.response.cardRenderer(SKILL_NAME, randomFact);
         //Outputs speech and listens for another continent to be said.
-        this.response.speak(speechOutput + ' If you want to hear another fact say another or the same continent').listen("what continent do you want to learn about?");
+        this.response.speak(speechOutput + ' If you want to hear another fact say another or the same continent').listen("what continent 
+        do you want to learn about?");
         this.emit(':responseReady');
 
     },
 
-One challenge I had while creating this program was being able to have the code not just exit after emitting one fact and prompt the user to enter another continent to learn about. I feel this was an important addition because if the user wanted to use the program more than once they would have to open it over and over now you can use it until your done and just say stop.
+One challenge I had while creating this program was being able to have the code not just exit after emitting one fact and prompt the 
+user to enter another continent to learn about. I feel this was an important addition because if the user wanted to use the program more 
+than once they would have to open it over and over now you can use it until your done and just say stop.
 
 
-This Program can have very useful implementions for example if it was connected to a online news database and that was updated it could give global news about a region you want to hear about. Or it can be manipulated in one example if a user had multiple tests to study for they could make the array lists each one subject then enter string they need to study and choose what topic to learn about by simply talking to their alexa. 
+This Program can have very useful implementions for example if it was connected to a online news database and that was updated it could 
+give global news about a region you want to hear about. Or it can be manipulated in one example if a user had multiple tests to study 
+for they could make the array lists each one subject then enter string they need to study and choose what topic to learn about by simply 
+talking to their alexa. 
